@@ -1,0 +1,319 @@
+@import "variables.scss";
+
+.grid-container {
+    display: grid;
+    height: 160%;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 5fr 1.5fr;
+    //grid-template-columns: auto;
+    gap: 10px 10px;
+    grid-template-areas:
+      ". HEADER HEADER HEADER HEADER ."
+      ". MENU MENU MENU MENU ."
+      ". SECTION SECTION SECTION ASIDE ."
+      ". FOOTER FOOTER FOOTER FOOTER .";
+  }
+  
+  .HEADER { grid-area: HEADER;height: auto; }
+  
+  .MENU { grid-area: MENU;height: auto; }
+  
+  .SECTION { grid-area: SECTION;}
+  
+  .ASIDE { grid-area: ASIDE; }
+  
+  .FOOTER { grid-area: FOOTER; }
+
+  //bordes y sombras 
+  .bordesSombras{
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+  }
+  //Color y propiedades de botones
+  .propiedadesBotones{
+    background-color: $coloBoton;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    height: 25px;
+    color: $colorGris
+  }
+  //maxmin titulos 
+  @mixin titulo($fuente,$tamano) {
+      font-family: $fuente;
+      font-size: $tamano;
+  }
+  //maxmin Textos
+  @mixin textos($fuente,$tamano) {
+      font-size:$fuente;
+      font-family: $tamano;
+  }
+//Bloque Menu
+.menu{
+    &__grilla{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: justify;
+        background-color:$colorCeleste;
+        height: auto;
+        margin: 0;
+        margin-top: 0px;
+        margin-top: 3px;
+        justify-content: space-around;
+        @extend .bordesSombras;
+        @include titulo($fuenteTitulos,20px )
+    }
+    &__items{
+        font-family: 'Roboto',sans-serif;
+        list-style: none;
+        font-size: 20px;
+    }
+    &__link{
+        text-decoration: none;
+        color:$colorAzul;
+    }
+}
+//bloque de Servicios
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    &__Servicio{
+        text-align: center;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+        width: 45%;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        @extend .bordesSombras;
+    }
+    
+        &__icon{
+            color: $colorAzul;
+            font-size: 50px;
+        }
+        &__titulo{
+            @include titulo($fuenteTitulos,20px );
+            
+        }
+        &__descripcion{
+            @include textos($fuenteTextos,15px );
+        
+        }
+        &__boton{
+           @extend .propiedadesBotones;
+        }
+
+}
+  
+//Bloque Accesos por Producto, Material Novedad
+.cardAside{
+    display: flex;
+    height: auto;
+    margin: 10px;
+    font-family: "Roboto", sans-serif;
+    border-color:$colorAmarillo;
+    width: 98%;
+    flex-direction: column;
+    background-color:$colorAmarillo;
+    @extend .bordesSombras;
+    
+    &__item{
+        font-family: 'Roboto',sans-serif;
+        list-style: none;
+        border: 2px solid;
+        height: 100%;
+        font-size: 20px;
+        width: auto;  
+    }
+    &__link{
+        text-decoration: none;
+        color:$colorAzul;
+        &--nuevo{
+            background-color: $colorAmarillo;
+            color: $colorAzul;
+            border-radius: 10px;
+        }
+    }
+}
+//Bloque Footer
+.pie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colorAzul;
+    height: 200px;
+    margin-top: 20px;
+    @extend .bordesSombras;
+    &__autor{
+        font-family: $fuenteTitulos;
+        color: $colorGris;
+        text-align: center;
+    }
+    &__legales{
+        @include titulo($fuenteTitulos,15px );
+        color: $colorGris;
+    }
+    &__social{
+        border: 1px solid;
+        color: $colorGris;
+    
+    }
+    &__img{
+        height: 50px;
+        width: auto;
+    }
+}
+//pagina de Productos Bloque card Productos
+.cardPro{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    &__card{ 
+        border: 1px solid;
+        height: auto;
+        width: 30%;
+        margin-block: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        @extend .bordesSombras;
+    }
+    &__nombre{
+        @include titulo($fuenteTitulos,20px );
+    }
+    &__medidas{
+        @include textos($fuenteTextos,15px );
+    }
+    &__presentacion{
+        @include textos($fuenteTextos,15px );
+    }
+    &__material{
+        @include titulo($fuenteTitulos,20px );
+    }
+    &__precio{
+        @include titulo($fuenteTitulos,18px );
+        color: $coloBoton;
+    }
+    &__bntCom{
+            @extend .propiedadesBotones;
+    }
+    &__promo{
+        background-color: $colorAmarillo;
+    }
+}
+//Bloque Nosotros
+.cardNosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 30%;
+    margin-top: 10px;
+    background-color: #e2e2e2;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    @extend .bordesSombras;
+
+    &__titulo{
+        @include titulo($fuenteTitulos,20px );
+        
+    }
+    &__texto{
+        @include textos($fuenteTextos,15px )
+        
+    }
+}
+//Bloque Fabrica
+.cardFabrica{
+    display:flex;
+    flex-wrap: wrap;
+    &__detalle{
+        text-align: center;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+        width: auto;
+        margin-bottom: 10px;
+        margin-left: 1px;
+        margin-top: 1px;
+        @extend .bordesSombras;
+    }
+    &__img{
+        width:25%;
+        height: auto;
+        border-radius: 10px;
+    }
+    &__descripcion{
+        font-family: $fuenteTextos;
+    }
+}
+//Bloque Contacto
+.cardContacto{
+    padding: 20px;
+    @extend .bordesSombras;
+    &__label{
+        @include titulo($fuenteTitulos,15px );
+    }
+    &__input{
+        width: 500px;
+    }
+    &__area{
+        width: 500px;
+    }
+    &__bnt{
+        @extend .propiedadesBotones;
+        margin-top: 10px;
+        width: 50%;
+        
+    }
+}
+
+//CSS media queries
+@media only screen and (max-width:768px){
+    .grid-container {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto;
+        gap: 10px 10px;
+        grid-template-areas:
+          "HEADER"
+          "MENU"
+          "SECTION"
+          "SECTION"
+          "SECTION"
+          "ASIDE"
+          "FOOTER";
+      }
+      .menu{
+        &__grilla{
+            display: flex;
+            flex-direction: column;
+        }
+        }
+      .card{
+            display: flex;
+            flex-wrap: wrap;
+            &__Servicio{
+               
+                width: auto;
+            }
+        }
+      .cardPro{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        &__card{ 
+            height: auto;
+            width:100%; 
+            }
+        }
+}
+
