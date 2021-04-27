@@ -1,5 +1,6 @@
 @import "variables.scss";
 
+
 .grid-container {
     display: grid;
     height: 160%;
@@ -39,16 +40,31 @@
     height: 25px;
     color: $colorGris
   }
-  //maxmin titulos 
+  //mixin titulos 
   @mixin titulo($fuente,$tamano) {
-      font-family: $fuente;
+      font-family:$fuente;
       font-size: $tamano;
   }
-  //maxmin Textos
+  //mixin Textos
   @mixin textos($fuente,$tamano) {
       font-size:$fuente;
-      font-family: $tamano;
+      font-family:$tamano;
   }
+//Bloque Presentación
+.presenta{
+    &__bienvenida{
+        background-color: $coloBoton;
+        @extend .bordesSombras;
+        height: 200;
+        width: 98%;
+        color: white;
+        text-align: center;
+
+    }
+    &__line{
+        color: #e2e2e2;
+    }
+}
 //Bloque Menu
 .menu{
     &__grilla{
@@ -73,6 +89,11 @@
     &__link{
         text-decoration: none;
         color:$colorAzul;
+    }
+    &__items:hover{
+        background-color: $colorAmarillo;
+        color: $colorCeleste;
+        border-radius: 10px;
     }
 }
 //bloque de Servicios
@@ -275,8 +296,9 @@
     }
 }
 
-//CSS media queries
-@media only screen and (max-width:768px){
+
+//CSS media Queries para 360
+@media only screen and (max-width:360px){
     .grid-container {
         display: grid;
         height: auto;
@@ -291,6 +313,12 @@
           "SECTION"
           "ASIDE"
           "FOOTER";
+      }
+      //Adapta la Imagen Logo a 360
+      .logo{
+        &__img{
+            width: 91%;
+        }
       }
       .menu{
         &__grilla{
@@ -313,6 +341,51 @@
         &__card{ 
             height: auto;
             width:100%; 
+            }
+        }
+}
+//CSS media queries para 768
+@media only screen and (max-width:768px){
+    .grid-container {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto;
+        gap: 10px 10px;
+        grid-template-areas:
+          "HEADER"
+          "MENU"
+          "SECTION"
+          "SECTION"
+          "SECTION"
+          "ASIDE"
+          "FOOTER";
+      }
+      //posisiona en el centro el Logo
+      .logo{
+          text-align: center;
+      }
+      .menu{
+        &__grilla{
+            display: flex;
+            flex-direction: column;
+        }
+        }
+      .card{
+            display: flex;
+            flex-wrap: wrap;
+            &__Servicio{
+               
+                //width: auto;
+            }
+        }
+      .cardPro{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        &__card{ 
+            height: auto;
+            width:48%; 
             }
         }
 }

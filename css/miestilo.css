@@ -23,7 +23,7 @@
 .FOOTER {
   grid-area: FOOTER; }
 
-.bordesSombras, .menu__grilla, .card__Servicio, .cardAside, .pie, .cardPro__card, .cardNosotros, .cardFabrica__detalle, .cardContacto {
+.bordesSombras, .presenta__bienvenida, .menu__grilla, .card__Servicio, .cardAside, .pie, .cardPro__card, .cardNosotros, .cardFabrica__detalle, .cardContacto {
   border: 1px solid;
   border-radius: 10px;
   box-shadow: 10px 5px 5px black; }
@@ -35,6 +35,16 @@
   text-align: center;
   height: 25px;
   color: #dfdfff; }
+
+.presenta__bienvenida {
+  background-color: #008843;
+  height: 200;
+  width: 98%;
+  color: white;
+  text-align: center; }
+
+.presenta__line {
+  color: #e2e2e2; }
 
 .menu__grilla {
   display: flex;
@@ -58,6 +68,11 @@
 .menu__link {
   text-decoration: none;
   color: #171934; }
+
+.menu__items:hover {
+  background-color: #ffc107;
+  color: #c6d1ff;
+  border-radius: 10px; }
 
 .card {
   display: flex;
@@ -210,7 +225,7 @@
     margin-top: 10px;
     width: 50%; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 360px) {
   .grid-container {
     display: grid;
     height: auto;
@@ -218,6 +233,8 @@
     grid-template-rows: auto;
     gap: 10px 10px;
     grid-template-areas: "HEADER" "MENU" "SECTION" "SECTION" "SECTION" "ASIDE" "FOOTER"; }
+  .logo__img {
+    width: 91%; }
   .menu__grilla {
     display: flex;
     flex-direction: column; }
@@ -233,3 +250,27 @@
     .cardPro__card {
       height: auto;
       width: 100%; } }
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px 10px;
+    grid-template-areas: "HEADER" "MENU" "SECTION" "SECTION" "SECTION" "ASIDE" "FOOTER"; }
+  .logo {
+    text-align: center; }
+  .menu__grilla {
+    display: flex;
+    flex-direction: column; }
+  .card {
+    display: flex;
+    flex-wrap: wrap; }
+  .cardPro {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+    .cardPro__card {
+      height: auto;
+      width: 48%; } }
