@@ -190,7 +190,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  height: 30%;
+  height: auto;
   margin-top: 10px;
   background-color: #e2e2e2;
   padding-top: 10px;
@@ -236,31 +236,18 @@ body {
     margin-top: 10px;
     width: 50%; }
 
-@media only screen and (max-width: 360px) {
-  .grid-container {
-    display: grid;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px 10px;
-    grid-template-areas: "HEADER" "MENU" "SECTION" "SECTION" "SECTION" "ASIDE" "FOOTER"; }
-  .logo__img {
-    width: 91%; }
-  .menu__grilla {
-    display: flex;
-    flex-direction: column; }
-  .card {
-    display: flex;
-    flex-wrap: wrap; }
-    .card__Servicio {
-      width: auto; }
-  .cardPro {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center; }
-    .cardPro__card {
-      height: auto;
-      width: 100%; } }
+.carousel-inner .carousel-item h5 {
+  color: #171934;
+  font-family: 'Roboto';
+  font-weight: bold; }
+
+.carousel-inner .carousel-item p {
+  color: #171934;
+  font-family: 'Roboto';
+  font-weight: bold; }
+
+.contacto {
+  padding: 10px; }
 
 @media only screen and (max-width: 768px) {
   .grid-container {
@@ -275,7 +262,7 @@ body {
   .menu__grilla {
     display: flex;
     flex-direction: column; }
-  .card {
+  .tarjetas {
     display: flex;
     flex-wrap: wrap; }
   .cardPro {
@@ -285,3 +272,31 @@ body {
     .cardPro__card {
       height: auto;
       width: 48%; } }
+
+@media only screen and (max-width: 360px) {
+  .grid-container {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px 10px;
+    grid-template-areas: "HEADER" "MENU" "SECTION" "SECTION" "SECTION" "ASIDE" "FOOTER"; }
+  .logo__img {
+    width: 91%; }
+  .menu__grilla {
+    display: flex;
+    flex-direction: column; }
+  .tarjetas {
+    display: flex;
+    flex-wrap: wrap; }
+    .tarjetas__Servicio {
+      width: 95%; }
+  .cardPro {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+    .cardPro__card {
+      height: auto;
+      width: 95%; }
+  .cardAside {
+    width: 93%; } }

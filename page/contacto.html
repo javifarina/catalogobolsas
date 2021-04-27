@@ -15,7 +15,7 @@
     <main class="grid-container">
         <header class="HEADER">
             <div class="logo">
-                <img class="logo__img" src="../Img/Elmundodelasbolsas.png" alt="">
+                <img class="logo__img" src="../Img/Elmundodelasbolsas.png" alt="logo">
             </div>
         </header>
         <nav class="MENU">
@@ -29,19 +29,26 @@
         </nav>
         <section class="SECTION">
             <h1 class="titulos">CONTACTO</h1>
-            <div class="cardContacto">
-                <form action="#">
-                     <label class="cardContacto__label" for="nombre">Nombre</label>
-                     <input class="cardContacto__input" type ="text" id="nombre" placeholder="Ingresa tu Nombre"><br>
-                     <label class="cardContacto__label" for="apellido">Apellido</label>
-                     <input class="cardContacto__input" type="text" id="apellido" placeholder="Ingresa tu Apellido"><br>
-                     <label class="cardContacto__label" for="mail">Email</label>
-                     <input class="cardContacto__input" type="email" id="mail"placeholder="Ingresar Email"><br>
-                     <label class="cardContacto__label" for="comentario">Dejanos tu Comentario</label><br>
-                     <textarea class="cardContacto__area" name="" id="comentario" cols="30" rows="5"></textarea><br>
-                     <input class="cardContacto__bnt" id="enviar" type="submit" value="Enviar Formulario"><br>
+            <div class="contacto">
+                <form class="#">
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                    <div id="emailHelp" class="form-text">Escriba por favor aqui su nombre y apellido</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Nunca compartimos su correo electrónico con nadie más..</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Comentarios aqui</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
-            </div>
+              </div>
             
         </section>
            
@@ -52,11 +59,11 @@
                     <h5 class="pie__legales">Copyright © El mundo de las bolsas. All rights reserved.</h5>
                 </div>                      
                 <div class="pie__social">
-                    <img class="pie__img" src="./Img/Circle-Button.png" alt="">
-                    <img class="pie__img" src="./Img/Circle-Button-1.png" alt="">
-                    <img class="pie__img" src="./Img/Circle-Button-2.png" alt="">
-                    <img class="pie__img" src="./Img/Circle-Button-3.png" alt="">
-                    <img class="pie__img" src="./Img/Circle Button-4.png" alt="">
+                    <img class="pie__img" src="../../Img/Circle-Button.png" alt="facebook">
+                    <img class="pie__img" src="../../Img/Circle-Button-1.png" alt="twitter">
+                    <img class="pie__img" src="../../Img/Circle-Button-2.png" alt="Instagram">
+                    <img class="pie__img" src="../../Img/Circle-Button-3.png" alt="linkedin">
+                    <img class="pie__img" src="../../Img/Circle Button-4.png" alt="correo">
                 </div>
             </div>
         </footer>
