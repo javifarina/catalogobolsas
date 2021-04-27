@@ -1,6 +1,12 @@
 @import "variables.scss";
+*{
+    margin: 0;
+    padding: 0;
+}
 
-
+body{
+    background-image: url(../Img/try-falcon-prevent-hero-bg.jpg);
+}
 .grid-container {
     display: grid;
     height: 160%;
@@ -96,8 +102,15 @@
         border-radius: 10px;
     }
 }
+//Componente de Bootstrap Jumbotron
+.jumbotron{
+    background: url(../Img/bg-pattern.png),linear-gradient(to left,#559743,#293911bf);
+    color:white;
+    //border-radius: 10px;
+    @extend .bordesSombras;
+}
 //bloque de Servicios
-.card{
+.tarjetas{
     display: flex;
     flex-wrap: wrap;
     &__Servicio{

@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-image: url(../Img/try-falcon-prevent-hero-bg.jpg); }
+
 .grid-container {
   display: grid;
   height: 160%;
@@ -23,12 +30,12 @@
 .FOOTER {
   grid-area: FOOTER; }
 
-.bordesSombras, .presenta__bienvenida, .menu__grilla, .card__Servicio, .cardAside, .pie, .cardPro__card, .cardNosotros, .cardFabrica__detalle, .cardContacto {
+.bordesSombras, .presenta__bienvenida, .menu__grilla, .jumbotron, .tarjetas__Servicio, .cardAside, .pie, .cardPro__card, .cardNosotros, .cardFabrica__detalle, .cardContacto {
   border: 1px solid;
   border-radius: 10px;
   box-shadow: 10px 5px 5px black; }
 
-.propiedadesBotones, .card__boton, .cardPro__bntCom, .cardContacto__bnt {
+.propiedadesBotones, .tarjetas__boton, .cardPro__bntCom, .cardContacto__bnt {
   background-color: #008843;
   border-radius: 10px;
   width: 50%;
@@ -74,10 +81,14 @@
   color: #c6d1ff;
   border-radius: 10px; }
 
-.card {
+.jumbotron {
+  background: url(../Img/bg-pattern.png), linear-gradient(to left, #559743, #293911bf);
+  color: white; }
+
+.tarjetas {
   display: flex;
   flex-wrap: wrap; }
-  .card__Servicio {
+  .tarjetas__Servicio {
     text-align: center;
     height: auto;
     padding: 10px;
@@ -86,13 +97,13 @@
     margin-bottom: 10px;
     margin-left: 10px;
     margin-top: 10px; }
-  .card__icon {
+  .tarjetas__icon {
     color: #171934;
     font-size: 50px; }
-  .card__titulo {
+  .tarjetas__titulo {
     font-family: "Roboto", sans-serif;
     font-size: 20px; }
-  .card__descripcion {
+  .tarjetas__descripcion {
     font-size: "Open Sans", sans-serif;
     font-family: 15px; }
 
