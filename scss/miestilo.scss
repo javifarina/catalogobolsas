@@ -190,6 +190,7 @@ body{
     &__legales{
         @include titulo($fuenteTitulos,15px );
         color: $colorGris;
+        text-align: center;
     }
     &__social{
         
@@ -357,10 +358,7 @@ body{
       .tarjetas{
             display: flex;
             flex-wrap: wrap;
-            &__Servicio{
-               
-                //width: auto;
-            }
+           
         }
       .cardPro{
             display: flex;
