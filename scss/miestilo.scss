@@ -322,8 +322,10 @@ body{
 .contacto{
     padding: 10px;
 }
-
-
+//titulos
+.titulos{
+    text-align: start;
+}
 
 //CSS media queries para 768
 @media only screen and (max-width:768px){
@@ -368,6 +370,9 @@ body{
             height: auto;
             width:48%; 
             }
+        }
+        .titulos{
+            text-align: center;
         }
 }
 //CSS media Queries para 360
@@ -420,4 +425,7 @@ body{
      .cardAside{
         width: 93%;
      }
+     .titulos{
+        text-align: center;
+    }
 }

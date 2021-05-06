@@ -248,6 +248,9 @@ body {
 .contacto {
   padding: 10px; }
 
+.titulos {
+  text-align: start; }
+
 @media only screen and (max-width: 768px) {
   .grid-container {
     display: grid;
@@ -270,7 +273,9 @@ body {
     text-align: center; }
     .cardPro__card {
       height: auto;
-      width: 48%; } }
+      width: 48%; }
+  .titulos {
+    text-align: center; } }
 
 @media only screen and (max-width: 360px) {
   .grid-container {
@@ -298,4 +303,6 @@ body {
       height: auto;
       width: 95%; }
   .cardAside {
-    width: 93%; } }
+    width: 93%; }
+  .titulos {
+    text-align: center; } }
