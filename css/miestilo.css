@@ -260,21 +260,25 @@ body {
     grid-template-rows: auto;
     gap: 10px 10px;
     grid-template-areas: "HEADER" "MENU" "SECTION" "SECTION" "SECTION" "ASIDE" "FOOTER"; }
-  .logo {
-    text-align: center; }
+  .logo__img {
+    width: 91%; }
   .menu__grilla {
     display: flex;
     flex-direction: column; }
   .tarjetas {
     display: flex;
     flex-wrap: wrap; }
+    .tarjetas__Servicio {
+      width: 95%; }
   .cardPro {
     display: flex;
     flex-wrap: wrap;
     text-align: center; }
     .cardPro__card {
       height: auto;
-      width: 48%; }
+      width: 95%; }
+  .cardAside {
+    width: 93%; }
   .titulos {
     text-align: center; } }
 

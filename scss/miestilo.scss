@@ -346,30 +346,41 @@ body{
           "FOOTER";
       }
       //posisiona en el centro el Logo
-      .logo{
-          text-align: center;
-      }
-      .menu{
-        &__grilla{
-            display: flex;
-            flex-direction: column;
-        }
-        }
-      .tarjetas{
-            display: flex;
-            flex-wrap: wrap;
-           
-        }
-      .cardPro{
-            display: flex;
-            flex-wrap: wrap;
-            text-align: center;
-        &__card{ 
-            height: auto;
-            width:48%; 
+ 
+ 
+        .logo{
+            &__img{
+                width: 91%;
             }
-        }
-        .titulos{
+          }
+          .menu{
+            &__grilla{
+                display: flex;
+                flex-direction: column;
+            }
+            }
+          .tarjetas{
+                display: flex;
+                flex-wrap: wrap;
+                &__Servicio{
+                   
+                    width: 95%;
+                }
+            }
+          .cardPro{
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                 
+            &__card{ 
+                height: auto;
+                width: 95%; 
+                }
+            }
+         .cardAside{
+            width: 93%;
+         }
+         .titulos{
             text-align: center;
         }
 }
