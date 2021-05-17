@@ -329,7 +329,7 @@ body{
 }
 
 //CSS media queries para 768
-@media only screen and (max-width:768px){
+@media only screen and (max-width:1024px){
     .grid-container {
         display: grid;
         height: auto;
@@ -346,8 +346,6 @@ body{
           "FOOTER";
       }
       //posisiona en el centro el Logo
- 
- 
         .logo{
             &__img{
                 width: 91%;
@@ -364,7 +362,7 @@ body{
                 flex-wrap: wrap;
                 &__Servicio{
                    
-                    width: 95%;
+                    width: 45%;
                 }
             }
           .cardPro{
@@ -374,7 +372,7 @@ body{
                  
             &__card{ 
                 height: auto;
-                width: 95%; 
+                width: 47%; 
                 }
             }
          .cardAside{
@@ -385,7 +383,7 @@ body{
         }
 }
 //CSS media Queries para 360
-@media only screen and (max-width:360px){
+@media only screen and (max-width:678px){
     .grid-container {
         display: grid;
         height: auto;

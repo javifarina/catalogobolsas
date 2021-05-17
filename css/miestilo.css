@@ -252,7 +252,7 @@ body {
 .titulos {
   text-align: start; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .grid-container {
     display: grid;
     height: auto;
@@ -269,20 +269,20 @@ body {
     display: flex;
     flex-wrap: wrap; }
     .tarjetas__Servicio {
-      width: 95%; }
+      width: 45%; }
   .cardPro {
     display: flex;
     flex-wrap: wrap;
     text-align: center; }
     .cardPro__card {
       height: auto;
-      width: 95%; }
+      width: 47%; }
   .cardAside {
     width: 93%; }
   .titulos {
     text-align: center; } }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 678px) {
   .grid-container {
     display: grid;
     height: auto;
